@@ -1,0 +1,80 @@
+:root {
+    --blue-color-gradient-top : linear-gradient(-170deg,#6B729B -100%, #62A2CF -95%,#141B30 60%, #6B729B 250%);
+    --blue-color-gradient-down : linear-gradient(-300deg,#6B729B -100%, #62A2CF -95%,#141B30 30%, #6B729B 250%);
+    --blue-color : #62A2CF;
+    --text-color : white;
+    --background-color : #302E2E;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-size: 87.5%;
+}
+
+body h1 {
+    color: #62A2CF;
+    
+}
+
+body p {
+    color: var(--text-color);
+}
+
+h1, h2, p, a {
+    font-family: "Segoe UI";
+}
+
+a {
+    text-decoration: none;
+}
+
+header  {
+    background: var(--blue-color-gradient-top);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+header > span {
+    color: var(--text-color);
+    font-family: "Antigrav";
+    font-size: 1.8em;
+    
+}
+header > button {
+    background-color: transparent;
+    border : none;
+}
+main {
+    padding: 0 10px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    background: var(--blue-color-gradient-down);
+}
+footer > div {
+    display: flex;
+    justify-content: flex-end;
+}
+footer > div {
+    width: 25%;;
+}
+footer > div a {
+    margin: 0 5px;
+}
+footer > div a > img {
+    width: 20px;
+}
+footer span {
+    color: var(--text-color);
+    font-family: "Segoe UI";
+}
+@font-face {
+    font-family: "Antigrav";
+    src: url("../font/antigrav-bb.italic.ttf");
+    
+}

@@ -1,0 +1,44 @@
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section > img {
+    width: 95%;
+    border: 1px solid grey;
+}
+main section:first-of-type img {
+    border-radius: 0 100px 0 100px;
+}
+main section:nth-child(2) img {
+    border-radius: 100px 0 100px 0;
+}
+main section > p {
+    text-align: center; 
+}
+main section:nth-child(2) h1 {
+    text-align: end;
+}
+main section:last-of-type {
+    padding: 50px 0;
+}
+main section a {
+    margin: 10px 0;
+}
+main section:last-of-type a:first-of-type {
+    background-color: var(--blue-color);
+    color: var(--background-color);
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 8px 8px 25px 8px;
+    font-size: 1.4em;
+}
+main section:last-of-type a:last-of-type {
+    border: 3px solid var(--blue-color);
+    padding: 5px 70px;
+    font-family: "Segoe UI";
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--blue-color);
+    border-radius: 5px 5px 5px 20px;
+}
