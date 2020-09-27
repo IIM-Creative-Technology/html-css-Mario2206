@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > h1 , main > h2 {
+    width: 100%;
+}
+main > div:first-of-type {
+    width: 80%;
+}
+main > div:first-of-type img {
+    width: 100%;
+}
+main ul {
+    list-style: none;
+}
+main ul li {
+    position: relative;
+    padding: 10px 0;
+}
+main ul li > input {
+    width: 0;
+    height: 0;
+}
+main ul li > input::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: tomato;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}

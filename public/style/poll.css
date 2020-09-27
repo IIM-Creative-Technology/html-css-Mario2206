@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 10px ;
+}
+body > div > label {
+    width: 30px;
+}
+body > div img {
+    width: 100%;
+}
+body > div > input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    width: 50%;
+    margin-left: 10px;  
+    color: var(--text-color);
+}
+body > div > input:focus {
+    outline: none;
+}
+.poll-containers{
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+.poll-containers div:nth-child(2) {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.poll-containers div:nth-child(2) h2 {
+    margin: 0;
+}
+.poll-portrait {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.poll-portrait > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.poll-portrait > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.poll-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.poll-score img {
+    width: 25px;
+}
+.poll-score > span {
+    font-weight: bold;
+    font-family: "Segoe UI";
+}
+.poll-containers i, .poll-containers h2 {
+    color: var(--text-color);
+}
+
+.poll-containers:hover {
+    border-radius: 10px;
+    background: var(--blue-color-item-gradient);
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 100px 20px 20px 100px;
+}
+
+@media screen and (min-width : 800px) {
+    body > div > input {
+        width: 25%;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .poll-containers div{
+        margin: 0 10px;
+    }
+}

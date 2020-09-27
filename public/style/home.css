@@ -2,6 +2,7 @@ main section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 main section > img {
     width: 95%;
@@ -41,4 +42,30 @@ main section:last-of-type a:last-of-type {
     font-weight: bold;
     color: var(--blue-color);
     border-radius: 5px 5px 5px 20px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width : 800px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section:nth-child(1), main section:nth-child(2) {
+        width: 50%;
+    }
+    main section > p {
+        width: 60%;
+    }
+    main section > img {
+        width: 50%;
+    }
+
 }
