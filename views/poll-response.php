@@ -24,18 +24,31 @@
             <ul>
                 <li>
                     <input type="radio" name="response" id="r1">
+                    <label class="radio" for="r1">
+                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
+                    </label>
                     <label for="r1">Les rouges</label>
+                    <img src="<?= IMG_DIR ?>info.png" alt="" class="data-icon">
                 </li>
                 <li>
                     <input type="radio" name="response" id="r2">
+                    <label class="radio" for="r2">
+                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
+                    </label>
                     <label for="r2">Les bleus</label>
                 </li>
                 <li>
                     <input type="radio" name="response" id="r3">
+                    <label class="radio" for="r3">
+                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
+                    </label>
                     <label for="r3">Les verts</label>
                 </li>
                 <li>
                     <input type="radio" name="response" id="r4">
+                    <label class="radio" for="r4">
+                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
+                    </label>
                     <label for="r4">Les jeunes</label>
                 </li>
             </ul>

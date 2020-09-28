@@ -80,11 +80,55 @@ body > div > input:focus {
 }
 
 .poll-containers:hover {
+    position: relative;
     border-radius: 10px;
     background: var(--blue-color-item-gradient);
-    border: 2px solid white;
     box-sizing: border-box;
     border-radius: 100px 20px 20px 100px;
+}
+.poll-containers:hover::after, .poll-containers:hover::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+}
+.poll-containers:hover::after {
+    bottom: 0;
+    left: 10%;
+    animation: 4s ease-in-out moveBorderToLeft infinite;
+}
+.poll-containers:hover::before {
+    top: 0;
+    right: 10%;
+    animation: 4s ease-in-out moveBorderToRight infinite;
+}
+
+/* Animation */
+
+@keyframes moveBorderToLeft {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: 78%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes moveBorderToRight {
+    0% {
+        right: 7%;
+    }
+    50% {
+        right: 75%;
+    }
+    100% {
+        right: 7%;
+    }
 }
 
 @media screen and (min-width : 800px) {
@@ -95,6 +139,10 @@ body > div > input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    main > section {
+        padding: 0 10px;
+        box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
     }
     .poll-containers div{
         margin: 0 10px;

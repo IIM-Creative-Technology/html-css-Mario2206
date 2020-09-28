@@ -2,34 +2,80 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 30px;
 }
 main > h1 , main > h2 {
     width: 100%;
+    text-align: center;
+}
+main h2 {
+    color: white;
 }
 main > div:first-of-type {
     width: 80%;
+    /* width: 200px;
+    height: 200px; */
+    /* border-radius: 100%; */
+    clip-path: circle(40%);
+    overflow: hidden;
 }
 main > div:first-of-type img {
     width: 100%;
 }
+main form {
+    width: 100%;
+}
 main ul {
     list-style: none;
+    width: 100%;
+    padding: 0;
 }
 main ul li {
     position: relative;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
 }
 main ul li > input {
-    width: 0;
-    height: 0;
+    display: none;
 }
-main ul li > input::before {
-    content: "";
+main ul li > .radio {
     width: 25px;
     height: 25px;
-    background-color: tomato;
-    position: absolute;
+    background-color: #8B8E90;
+    border : 2px solid #DDD4D4;
+    border-radius: 10px;
     top: 0;
     left: 0;
+    position: relative;
+}
+main ul li > .radio img {
+    position: absolute;
+    left: -5px;
+    bottom: 3px;
+    display: none;
+}
+main ul li > label:last-of-type {
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+main ul li > input:checked ~ .radio img {
+    display: block;
+}
+.data-icon {
+    width: 10%;
+    justify-self: end;
+}
+input[type="submit"] {
+    background-color: var(--blue-color);
+    border: none;
+    font-weight: bold;
+    color: var(--background-color);
+    font-size: 1.5em;
+    padding : 5px 30px;
+    border-radius: 10px 10px 50px 50px;
+    margin: 40px 0;
 
 }

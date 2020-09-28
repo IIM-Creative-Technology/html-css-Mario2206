@@ -26,7 +26,7 @@ body p {
     color: var(--text-color);
 }
 
-h1, h2, p, a, input {
+h1, h2, p, a, input, label {
     font-family: "Segoe UI";
 }
 
