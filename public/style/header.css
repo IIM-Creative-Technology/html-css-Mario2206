@@ -93,6 +93,9 @@ header > button {
     justify-content: space-around;
 
 }
+header > button:hover {
+    cursor: pointer;
+}
 header > button::before, header > button::after {
     content: "";
 }

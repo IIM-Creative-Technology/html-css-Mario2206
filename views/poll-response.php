@@ -1,7 +1,7 @@
 <?php 
-    $url = "http://" . $_SERVER["SERVER_NAME"] . "/public/";
-    define("IMG_DIR", $url . "img/");
-    define("CSS_DIR", $url . "style/");
+    $url = "http://" . $_SERVER["SERVER_NAME"];
+    define("IMG_DIR", $url . "/public/" . "img/");
+    define("CSS_DIR", $url . "/public/" . "style/");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,7 +16,7 @@
 <body>
     <?php require("./inc/header.php") ?>
     <div class="navigation-support">
-        <a href="#" class="back-container"></a>
+        <a href="<?= $url ?>/views/poll.php" class="back-container"></a>
     </div>
     <main>
         <h1>Sujet du sondage</h1>
