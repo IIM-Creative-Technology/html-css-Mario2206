@@ -1,0 +1,138 @@
+header  {
+    background: var(--blue-color-gradient-top);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+header > span {
+    color: var(--text-color);
+    font-family: "Antigrav";
+    font-size: 1.8em;
+    
+}
+header > nav {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 1s;
+}
+header > nav >div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+header > nav >div:first-child img {
+    margin: 20px;
+}
+header > nav > ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+header > nav > ul > li {
+    display: flex;
+    justify-content: center;
+}
+header > nav > ul > li > a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.7s;
+}
+header nav > .close{
+    position: relative;
+    background: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    border: none;
+    border: 2px solid var(--text-color);
+    border-radius: 100px;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+header .close::after, header .close::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    display: inline-block;
+    transform-origin: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header .close::after {
+    transform: rotate(-45deg);
+}
+header .close::before {
+    transform: rotate(45deg);
+}
+
+header > button {
+    background-color: transparent;
+    border : none;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+header > button::before, header > button::after {
+    content: "";
+}
+header > button > span, header > button::before, header > button::after {
+    margin: 4px 0;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    border-radius: 100px;
+    background-color: var(--text-color);
+}
+.hide-switch ul > li:nth-child(1) > a {
+    animation: text-fadein 1s;
+}
+.hide-switch ul > li:nth-child(2) > a {
+    animation: text-fadein 1.5s;
+}
+.hide-switch ul > li:nth-child(3) > a {
+    animation: text-fadein 2s;
+}
+
+/* HOVER */
+header > nav > ul > li a:hover {
+    transform: scale(3);
+}
+header > nav > button:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+}
+/* HEADER CLASS */
+.hide-switch {
+    transition: 1s;
+    transform: translateX(0%);
+}
+
+@keyframes text-fadein {
+    from {
+        transform: translateX(10000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

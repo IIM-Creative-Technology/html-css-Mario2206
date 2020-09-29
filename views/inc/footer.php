@@ -12,3 +12,4 @@
         </a>
     </div>
 </footer>
+<script src="http://<?=$_SERVER["SERVER_NAME"]?>/public/js/header.js"></script>

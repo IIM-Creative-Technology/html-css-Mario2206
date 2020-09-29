@@ -7,6 +7,7 @@
     --green-color : #00FF77;
     --orange-color : #FFDF00;
     --background-color : #302E2E;
+    --grey-color : #A0A3A1
 }
 
 body {
@@ -26,7 +27,7 @@ body p {
     color: var(--text-color);
 }
 
-h1, h2, p, a, input, label {
+* {
     font-family: "Segoe UI";
 }
 
@@ -34,26 +35,13 @@ a {
     text-decoration: none;
 }
 
-header  {
-    background: var(--blue-color-gradient-top);
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 20px;
-}
-header > span {
-    color: var(--text-color);
-    font-family: "Antigrav";
-    font-size: 1.8em;
-    
-}
-header > button {
-    background-color: transparent;
-    border : none;
-}
+
 main {
     padding: 0 10px;
 }
 footer {
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,13 +65,41 @@ footer > span {
     color: var(--text-color);
     font-family: "Segoe UI";
 }
-
+button[type="submit"] {
+    background-color: var(--blue-color);
+    border: none;
+    font-weight: bold;
+    color: var(--background-color);
+    font-size: 1.5em;
+    padding : 5px 40px 5px 20px;
+    border-radius: 10px 10px 50px 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+button[type="submit"] .icon-load {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    border: 2px solid ;
+    right: 0;
+    margin-right: 10px;
+    transform: scale(0);
+}
+button {
+    outline: none;
+}
 /* COMMON CLASSES */
 .text-orange {
-    color: var(--orange-color);
+    color: var(--orange-color)!important;
 }
 .text-green {
-    color : var(--green-color)
+    color : var(--green-color)!important;
+}
+.text-close {
+    color : var(--grey-color)!important;
 }
 .page-enum {
     display: flex;
@@ -104,11 +120,45 @@ footer > span {
 .page-enum a:last-of-type {
     border-radius: 0 10px 10px 0;
 }
+.back-container {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+}
+.back-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    clip-path: polygon(0% 50%, 40% 0%, 40% 30%, 100% 50%, 40% 75%, 40% 100%);
+}
 
-/* ANIMATIONS */
+/* HOVER */
 .page-enum a:hover {
     background-color: var(--text-color);
     color: var(--background-color);
+}
+input[type="submit"]:hover, button[type="submit"] {
+    cursor: pointer;
+}
+button[type="submit"]:hover .icon-load {
+    animation: 0.5s growth alternate infinite;
+}
+button[type="submit"]:focus .icon-load {
+    border-color: rgb(32, 126, 32);
+    animation: none;
+    transform: scale(1);
+}
+/* GLOBAL KEYFRAMES */
+@keyframes growth {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 /* RESPONSIVE */
 

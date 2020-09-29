@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="<?= CSS_DIR ?>header.css">
     <link rel="stylesheet" href="<?=CSS_DIR?>common.css">
     <link rel="stylesheet" href="<?=CSS_DIR?>home.css">
 </head>

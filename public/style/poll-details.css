@@ -1,0 +1,244 @@
+.navigation-support {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.navigation-support > a > img {
+    width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+}
+main > h1 , main > h2, main h3 {
+    width: 100%;
+    text-align: center;
+}
+main h2 {
+    color: white;
+}
+main > div:first-of-type {
+    width: 80%;
+    clip-path: circle(40%);
+    overflow: hidden;
+}
+main > div:first-of-type:hover {
+    cursor: pointer;
+}
+main > div:first-of-type img {
+    width: 100%;
+}
+main form {
+    width: 100%;
+}
+.item-choice {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border : 2px solid transparent
+}
+input[type="radio"] {
+    display: none;
+}
+.item-choice > .radio {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #8B8E90;
+    border : 2px solid #DDD4D4;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+.item-choice > .radio img {
+    position: absolute;
+    left: -5px;
+    bottom: 3px;
+    display: none;
+}
+.item-choice > span:nth-child(2) {
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    overflow: hidden;
+    flex : 1
+    
+}
+.item-choice > input:checked body{
+    background-color: tomato;
+}
+.item-choice span:last-child {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+.item-choice .data-icon {
+    width: 25%;
+    justify-self: end;
+}
+/* WHEN RADIO IS CHECKED / HOVER ANIM */
+input[type="radio"]:checked + .item-choice, .item-choice:hover  {
+    background : var(--blue-color-item-gradient);
+    border-color: white;
+    cursor: pointer;
+}
+input[type="radio"]:checked + .item-choice .radio img {
+    display: block;
+}
+
+.favorite-choice {
+    margin: 20px 0 ;
+    border: 2px solid white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+.favorite-choice > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.favorite-choice img {
+    width: 25%;
+}
+.favorite-choice h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.5em;
+}
+.favorite-choice span {
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: bold;
+}
+.screen-anim::before {
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.screen-anim:hover::before {
+    background: linear-gradient(147deg, rgba(248, 248, 248, 0.505) 0%, rgba(197, 197, 183, 0.432) 35%, rgba(210, 224, 226, 0.212) 100%);
+	background-size: 400% 400%;
+	animation: startGradient 1s,  gradientAnim 3s ease infinite alternate;
+}
+
+.diagram {
+    width: 100%;
+    padding: 20px 0;
+}
+.diagram > div {
+    margin: 10px 0;
+    display: flex;
+}
+.diagram > div > strong {
+    font-size: 1.1em;
+    color: var(--text-color);
+    display: inline-block;
+    width: 30%;
+}
+.graphic {
+    width: 70%;
+    height: 30px;
+}
+.graphic .item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: bold;
+    padding-right: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    background: var(--blue-color-item-gradient);
+    border-radius: 0 30px 30px 0;
+    animation: graphGrowth 1s;
+    transform-origin: left;
+}
+
+/* ANIMATION */
+@keyframes startGradient {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+@keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 75%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes graphGrowth {
+    from {
+        transform: scaleX(0.1);
+    } 
+    to {
+        transform: scaleX(1);
+    } 
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width : 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        background-color: var(--background-color);
+        width: 60%;
+        margin: 60px 0;
+        position: relative;
+    }
+    main > div:first-of-type {
+        width: 50%;
+        transition: 1s;
+    }
+    main > div:first-of-type:hover {
+        clip-path: circle(100% at 50% 50%);
+    }
+    main > form {
+        padding: 50px 0;
+    }
+    .favorite-choice {
+        width: 70%;
+    }
+    .diagram {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    main {
+        width: 40% ;
+    }
+}
+
+
+

@@ -9,51 +9,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réponse au sondage</title>
+    <link rel="stylesheet" href="<?= CSS_DIR ?>header.css">
     <link rel="stylesheet" href="<?=CSS_DIR?>common.css">
-    <link rel="stylesheet" href="<?=CSS_DIR?>poll-response.css">
+    <link rel="stylesheet" href="<?=CSS_DIR?>poll-details.css">
 </head>
 <body>
     <?php require("./inc/header.php") ?>
+    <div class="navigation-support">
+        <a href="#" class="back-container"></a>
+    </div>
     <main>
         <h1>Sujet du sondage</h1>
         <div>
             <img src="<?=IMG_DIR?>koh-lanta.jpg" alt="koh-lanta">
         </div>
         <h2>Ici c'est la question ?</h2>
-        <form action="">
-            <ul>
-                <li>
-                    <input type="radio" name="response" id="r1">
-                    <label class="radio" for="r1">
-                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
-                    </label>
-                    <label for="r1">Les rouges</label>
-                    <img src="<?= IMG_DIR ?>info.png" alt="" class="data-icon">
-                </li>
-                <li>
-                    <input type="radio" name="response" id="r2">
-                    <label class="radio" for="r2">
-                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
-                    </label>
-                    <label for="r2">Les bleus</label>
-                </li>
-                <li>
-                    <input type="radio" name="response" id="r3">
-                    <label class="radio" for="r3">
-                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
-                    </label>
-                    <label for="r3">Les verts</label>
-                </li>
-                <li>
-                    <input type="radio" name="response" id="r4">
-                    <label class="radio" for="r4">
-                        <img src="<?= IMG_DIR ?>ok_icon.png" alt="">
-                    </label>
-                    <label for="r4">Les jeunes</label>
-                </li>
-            </ul>
+        <form action="#" method="POST">
+            <input type="radio" name="response" id="r1">
+            <label class="item-choice" for="r1">
+                <span class="radio">
+                    <img src="<?= IMG_DIR ?>ok_icon.png" alt="checkbox">
+                </span>
+                <span>Les rouges</span>
+                <span>
+                    <img src="<?= IMG_DIR ?>info.png" alt="information" class="data-icon" title="7834 personnes ont déjà voté pour ce choix">
+                </span>
+            </label>
+            <input type="radio" name="response" id="r2">
+            <label class="item-choice" for="r2">
+                <span class="radio">
+                    <img src="<?= IMG_DIR ?>ok_icon.png" alt="checkbox">
+                </span>
+                <span>Les bleus</span>
+                <span>
+                    <img src="<?= IMG_DIR ?>info.png" alt="information" class="data-icon" title="7834 personnes ont déjà voté pour ce choix">
+                </span>
+            </label>
+            <input type="radio" name="response" id="r3">
+            <label class="item-choice" for="r3">
+                <span class="radio">
+                    <img src="<?= IMG_DIR ?>ok_icon.png" alt="checkbox">
+                </span>
+                <span>Les verts</span>
+                <span>
+                    <img src="<?= IMG_DIR ?>info.png" alt="information" class="data-icon" title="7834 personnes ont déjà voté pour ce choix">
+                </span>
+            </label>
+            <input type="radio" name="response" id="r4">
+            <label class="item-choice" for="r4">
+                <span class="radio" >
+                    <img src="<?= IMG_DIR ?>ok_icon.png" alt="checkbox" >
+                </span>
+                <span>Les jeunes</span>
+                <span>
+                    <img src="<?= IMG_DIR ?>info.png" alt="information" class="data-icon" title="7834 personnes ont déjà voté pour ce choix">
+                </span>
+            </label>         
         </form>
-        <div>
+        <div class="favorite-choice screen-anim">
             <h3>Favoris : <u>Les rouges</u></h3>
             <div>
                 <img src="<?= IMG_DIR?>users.png" alt="users">
@@ -61,7 +74,10 @@
             </div>
         </div>
         <div>
-            <input type="submit" value="Confirmer">
+            <button type="submit">
+                <span class="icon-load"></span>
+                Confirmer
+            </button>
         </div>
     </main>
     <?php require("./inc/footer.php") ?>
