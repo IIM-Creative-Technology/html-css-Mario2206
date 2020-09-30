@@ -1,1 +1,1 @@
-Afin de que les fichiers se chargent correctement, merci de faire pointer le serveur sur la racine de mon projet. 
+Afin de que les fichiers se chargent correctement, merci de faire pointer le serveur sur la racine du projet. 

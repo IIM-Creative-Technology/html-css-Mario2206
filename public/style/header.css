@@ -10,6 +10,8 @@ header > span {
     color: var(--text-color);
     font-family: "Antigrav";
     font-size: 1.8em;
+    display: flex;
+    align-items: center;
     
 }
 header > nav {
