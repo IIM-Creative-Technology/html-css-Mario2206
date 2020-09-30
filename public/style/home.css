@@ -46,7 +46,7 @@ main section:last-of-type a:last-of-type {
 
 /* RESPONSIVE */
 
-@media screen and (min-width : 800px) {
+@media screen and (min-width : 700px) {
     body{
         display: flex;
         flex-direction: column;
